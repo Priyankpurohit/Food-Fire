@@ -8,7 +8,7 @@
   justify-content: space-between;
   display: flex;
   margin: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .logo {
   height: 100px;
@@ -18,27 +18,32 @@
 .nav-items > ul {
   display: flex;
   list-style-type: none;
+  margin-right: 20px;
 }
 .nav-items > ul > li {
-  font-size: larger;
+  font-size: x-large;
   padding: 10px;
   justify-content: space-between;
 }
 
 .card {
-  width: 330px;
-
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
+  width: 300px;
+  margin: 8px;
+  padding: 5px;
+  align-items: center;
 }
 .card > img {
   width: 100%;
-
   text-align: center;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 .restaurant-list {
   display: flex;
   flex-wrap: wrap;
+}
+.search-container {
+  margin: auto;
+  justify-content: center;
+
+  align-items: center;
 }

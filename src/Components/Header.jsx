@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../App.css";
 const Title = () => (
   <a href="/">
@@ -10,9 +11,12 @@ const Title = () => (
 );
 
 const Header = () => {
+  const [namez, setNamez] = useState("Food Fire");
   return (
     <div className="header">
       <Title />
+      <h1>{namez}</h1>
+      <button onClick={() => setNamez("New FOOD Fire")}>Change</button>
       <div className="nav-items">
         <ul>
           <li>Home</li>
