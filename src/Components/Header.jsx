@@ -10,13 +10,15 @@ const Title = () => (
   </a>
 );
 
+// const LoggedInUser = () => {
+//   return false;
+// };
+
 const Header = () => {
-  const [namez, setNamez] = useState("Food Fire");
+  const [loggeduser, setLoggedUser] = useState(false);
   return (
     <div className="header">
       <Title />
-      <h1>{namez}</h1>
-      <button onClick={() => setNamez("New FOOD Fire")}>Change</button>
       <div className="nav-items">
         <ul>
           <li>Home</li>
@@ -25,6 +27,11 @@ const Header = () => {
           <li>Cart</li>
         </ul>
       </div>
+      {loggeduser ? (
+        <button onClick={() => setLoggedUser(false)}>LogOut</button>
+      ) : (
+        <button onClick={() => setLoggedUser(true)}>LogIn</button>
+      )}
     </div>
   );
 };
