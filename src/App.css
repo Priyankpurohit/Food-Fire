@@ -6,7 +6,7 @@
 .header > button {
   width: 100px;
   height: 50px;
-  background-color: rgb(39, 40, 39);
+  background-color: rgb(84, 118, 84);
   border-radius: 15px;
   font-size: large;
   margin-top: 30px;
@@ -39,8 +39,15 @@
 .card {
   width: 350px;
   margin: 8px;
+
   align-items: center;
   background-color: bisque;
+  border-radius: 35px;
+}
+.shimmer-card {
+  background-color: lightgrey;
+  width: 350px;
+  height: 450px;
   border-radius: 35px;
 }
 .card > img {
@@ -62,7 +69,6 @@
   gap: 10px;
 }
 .search-container {
-  background-color: antiquewhite;
   width: 25%;
   height: 50px;
   border-radius: 35px;
@@ -73,20 +79,44 @@
 }
 .search-container > input {
   margin-left: 10px;
-  margin-top: 5px;
-  height: 32px;
-  width: 60%;
+  text-align: center;
+  height: 45px;
+  width: 65%;
   border-radius: 30px;
   background-color: antiquewhite;
   border: none;
   font-size: x-large;
+  padding-left: 1px;
+}
+.search-container > input:focus {
+  outline: none;
 }
 .search-container > button {
   margin: 10px 15px 0px;
-  width: 30%;
-  height: 35px;
+  width: 25%;
+  height: 45px;
   border-radius: 30px;
   background-color: antiquewhite;
   border: none;
   font-size: x-large;
+  cursor: pointer;
+}
+.search-container > button:hover {
+  box-shadow: 5px 5px 5px rgb(55, 54, 54);
+}
+.Menu {
+  display: flex;
+}
+.restaurant-details > img {
+  width: 100%;
+  height: 500px;
+  border-radius: 35px;
+  object-fit: cover;
+}
+.restaurant-details {
+  text-align: center;
+  justify-content: center;
+}
+.Menu > .menulist {
+  margin-left: 20px;
 }
