@@ -2,24 +2,24 @@ import "../App.css";
 const Footer = () => {
   return (
     <>
-      <div className="">
+      <div class="footer-5-column">
         <div class="footer-container">
           <div class="footer-navbar-container">
             <div class="footer-company-details">
-              <div className="">
-                <div className="w-35">
+              <div class="footer-details-inner">
+                <div class="footer-logo">
                   <img
                     className="logo"
                     alt="logo"
                     src="data:image/png;base64,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"
                   />
                 </div>
-                <div className="text-xl">
+                <div class="footer-content">
                   <h2>Order food & groceries. Discover best restaurants.</h2>
                 </div>
                 <div class="footer-icons">
-                  <ul className="flex m-2 w-35 justify-between">
-                    <li className="w-7">
+                  <ul>
+                    <li>
                       <a href="#">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const Footer = () => {
                         </svg>
                       </a>
                     </li>
-                    <li className="w-7">
+                    <li>
                       <a href="#">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ const Footer = () => {
                         </svg>
                       </a>
                     </li>
-                    <li className="w-7">
+                    <li>
                       <a href="#">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const Footer = () => {
                         </svg>
                       </a>
                     </li>
-                    <li className="w-7">
+                    <li>
                       <a href="#">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -63,8 +63,8 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex m-10 justify-evenly">
-              <div class="text-xl font-bold">
+            <div class="footer-navbar">
+              <div class="footer-navbar-col">
                 <h4>Contact Us</h4>
                 <ul>
                   <li>
@@ -78,7 +78,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="text-xl font-bold">
+              <div class="footer-navbar-col">
                 <h4>Support</h4>
                 <ul>
                   <li>
@@ -95,7 +95,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="text-xl font-bold">
+              <div class="footer-navbar-col">
                 <h4>Company</h4>
                 <ul>
                   <li>
@@ -112,7 +112,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="text-xl font-bold">
+              <div class="footer-navbar-col">
                 <h4>Legal</h4>
                 <ul>
                   <li>
@@ -132,8 +132,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="justify-center">
-            <h2>© 2025 Food Fire Limited - All Rights Reserved</h2>
+          <div class="footer-copyright">
+            <h3>© 2025 Food Fire Limited - All Rights Reserved</h3>
           </div>
         </div>
       </div>
