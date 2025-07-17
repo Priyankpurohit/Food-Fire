@@ -10,9 +10,9 @@ const RestaurantCard = ({
   return (
     <div className="card">
       <img src={IMG_URL + cloudinaryImageId} alt="restaurant image" />
-      <div className="text">
-        <h2>{name}</h2>
-        <h3>{cuisines?.join(", ")}</h3>
+      <div>
+        <h2>{name.slice(0, 25)}</h2>
+        <h3>{cuisines.toSpliced(3).join(", ")}</h3>
         <h3>⭐{avgRatingString} stars</h3>
         <h3>{locality + " , " + areaName}</h3>
       </div>

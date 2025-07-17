@@ -22,7 +22,7 @@ const Body = () => {
 
   async function getRestuarants() {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.19810&lng=72.82980&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9628669&lng=77.57750899999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
 
@@ -50,7 +50,6 @@ const Body = () => {
         />
 
         <button
-          className="search-btn"
           onClick={() => {
             const data = filterdata(searchText, allRestaurants);
             setFilteredRestaurants(data);
