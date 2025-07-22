@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
+import "../../App.css";
 
 const Basic = () => (
   <div>
@@ -34,7 +35,7 @@ const Basic = () => (
         isSubmitting,
         /* and other goodies */
       }) => (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
           <input
             type="email"
             name="email"
@@ -42,6 +43,7 @@ const Basic = () => (
             onBlur={handleBlur}
             placeholder="Email"
             value={values.email}
+            className="input"
           />
           {errors.email && touched.email && errors.email}
           <input
@@ -51,9 +53,10 @@ const Basic = () => (
             onBlur={handleBlur}
             value={values.password}
             placeholder="Password"
+            className="password"
           />
           {errors.password && touched.password && errors.password}
-          <button type="submit" disabled={isSubmitting}>
+          <button type="submit" disabled={isSubmitting} className="btn">
             Submit
           </button>
         </form>

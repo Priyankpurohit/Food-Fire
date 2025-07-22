@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../App.css";
+import useOnline from "../Components/pages/utiles/useOnline";
 import { Link } from "react-router-dom";
 const Title = () => (
   <Link to="/">
@@ -13,6 +14,7 @@ const Title = () => (
 
 const Header = () => {
   const [loggeduser, setLoggedUser] = useState(false);
+  const isOnline = useOnline();
   return (
     <div className="header">
       <Title />
@@ -32,6 +34,7 @@ const Header = () => {
           <li>Cart</li>
         </ul>
       </div>
+      <h2>{isOnline ? "✅" : "❌"}</h2>
       {loggeduser ? (
         <button onClick={() => setLoggedUser(false)}>LogOut</button>
       ) : (

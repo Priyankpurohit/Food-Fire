@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../App.css";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+
 import { Link } from "react-router-dom";
 
 function filterdata(searchText, allRestaurants) {
@@ -33,6 +34,7 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
+
   if (!allRestaurants) return null;
   if (filteredRestaurants?.length === 0 && allRestaurants.length > 1)
     return <h2>No Results Found!</h2>;

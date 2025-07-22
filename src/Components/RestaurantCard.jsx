@@ -1,4 +1,5 @@
 import { IMG_URL } from "../constants";
+
 const RestaurantCard = ({
   cloudinaryImageId,
   name,

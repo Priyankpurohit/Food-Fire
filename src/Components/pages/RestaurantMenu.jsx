@@ -1,23 +1,16 @@
-import { useEffect, useState } from "react";
+import { IMG_URL } from "../../constants";
 import { useParams } from "react-router-dom";
-import { FOODFIRE_MENU_API_URL, IMG_URL } from "../../constants";
+import useRestaurant from "./utiles/useRestaurant";
+import useOnline from "./utiles/useOnline";
 import "../../App.css";
 import Shimmer from "../Shimmer";
 const RestaurantMenu = () => {
   const { Id } = useParams();
-  const [restaurant, setRestaurant] = useState(null);
-
-  useEffect(() => {
-    getRestaurants();
-  }, []);
-
-  async function getRestaurants() {
-    const data = await fetch(FOODFIRE_MENU_API_URL + Id);
-    const json = await data.json();
-    console.log(json.data);
-    setRestaurant(json.data);
+  const restaurant = useRestaurant(Id);
+  const isOnline = useOnline();
+  if (!isOnline) {
+    return <h1> ⚠️ Looks Like Your Internet Connection isn't Working !!</h1>;
   }
-
   return !restaurant ? (
     <Shimmer />
   ) : (
@@ -30,7 +23,7 @@ const RestaurantMenu = () => {
           alt="restaurant image"
         />
         <div>
-          <h1>{restaurant?.cards[2]?.card?.card?.info?.name}</h1>
+          <h1>{restaurant?.cards[2]?.card?.card?.info?.name} </h1>
           <h2>{restaurant?.cards[2]?.card?.card?.info?.areaName}</h2>
           <h2>{restaurant?.cards[2]?.card?.card?.info?.locality}</h2>
           <h2>⭐{restaurant?.cards[2]?.card?.card?.info?.avgRating} Stars</h2>
