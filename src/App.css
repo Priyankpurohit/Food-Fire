@@ -6,7 +6,7 @@
 .header > button {
   width: 100px;
   height: 50px;
-  background-color: rgb(84, 118, 84);
+  background-color: rgb(182, 229, 182);
   border-radius: 15px;
   font-size: large;
   margin-top: 30px;
@@ -70,10 +70,9 @@
 }
 .search-container {
   width: 45%;
-  height: 50px;
+  height: 45px;
   border-radius: 35px;
   margin-top: 6px;
-  margin-left: 40px;
   padding: 5px 5px;
   margin-bottom: 15px;
 }
@@ -366,6 +365,13 @@
   font-size: x-large;
   padding-left: 1px;
 }
+.input:focus {
+  outline: none;
+}
+.password:focus {
+  outline: none;
+}
+
 .btn {
   margin: 10px 15px 10px;
   width: 25%;
@@ -375,4 +381,7 @@
   border: none;
   font-size: x-large;
   cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 5px 5px 5px rgb(55, 54, 54);
 }

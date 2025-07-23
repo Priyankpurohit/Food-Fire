@@ -57,7 +57,7 @@ const Basic = () => (
           />
           {errors.password && touched.password && errors.password}
           <button type="submit" disabled={isSubmitting} className="btn">
-            Submit
+            LogIn
           </button>
         </form>
       )}

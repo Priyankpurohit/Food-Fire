@@ -34,7 +34,7 @@ const Header = () => {
           <li>Cart</li>
         </ul>
       </div>
-      <h2>{isOnline ? "✅" : "❌"}</h2>
+      <h2>{isOnline ? "✅ Online" : "❌ Offline"}</h2>
       {loggeduser ? (
         <button onClick={() => setLoggedUser(false)}>LogOut</button>
       ) : (

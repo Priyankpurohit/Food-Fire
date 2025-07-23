@@ -1,16 +1,13 @@
 import { IMG_URL } from "../../constants";
 import { useParams } from "react-router-dom";
 import useRestaurant from "./utiles/useRestaurant";
-import useOnline from "./utiles/useOnline";
+
 import "../../App.css";
 import Shimmer from "../Shimmer";
 const RestaurantMenu = () => {
   const { Id } = useParams();
   const restaurant = useRestaurant(Id);
-  const isOnline = useOnline();
-  if (!isOnline) {
-    return <h1> ⚠️ Looks Like Your Internet Connection isn't Working !!</h1>;
-  }
+
   return !restaurant ? (
     <Shimmer />
   ) : (
